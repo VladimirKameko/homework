@@ -22,9 +22,8 @@ public class ex_2 {
                 (f >= q && f >= s && e >= (p + r))) {
             System.out.println("Здания помещаются");
 
-        }
-        else
+        } else
             System.out.println("здания не помещаются");
     }
-    }
+}
 
