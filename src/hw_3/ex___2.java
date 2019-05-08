@@ -5,29 +5,35 @@ import java.util.Arrays;
 public class ex___2 {
     public static void main(String[] args) {
         int count = 0;
-        int tmp = 0;
-        int[] array = {12, 12, 0, -1, 4, -1, 0, 12, 6};
-        int length = array.length;
-        for (int i = 0; i < length - 1; i++) {
-            for (int j = i + 1; j < length; j++) {
-                if (array[i] == array[j]) {
-                    for (int k = j; k < length - 1; k++) {
-                        array[k] = array[k + 1];
-                    }
-                    length--;
-                    count++;
-                }
+        int[] array = {2, 3, 3, 5};
+        for (int i = 0; i < array.length - 1; i++) {
+
+            if (array[i] == array[i + 1]) {
+
+                i++;
+                count++;
             }
         }
-        int[] arrayNew = new int[array.length - count];
-        for (int i = 0; i < arrayNew.length; i++) {
-            arrayNew[i] = array[i];
+        int[] array1 = new int[array.length - count];
+        System.out.println(array.length);
+        int ch = array.length;
+        int k = 0;
+        for (int j = 0; j < ch; j++) {
+            array1[k] = array[j];
+            if (array[j] == array[j + 1]) {
+                j++;
+
+            }
+            if (array1.length==array[k])
+                break;
+            k++;
+
+
         }
-        System.out.println(Arrays.toString(arrayNew));
 
-
-        System.out.println((count));
-
+        System.out.println(count);
+        System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(array1));
     }
 
 }
