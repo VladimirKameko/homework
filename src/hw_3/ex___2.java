@@ -4,36 +4,33 @@ import java.util.Arrays;
 
 public class ex___2 {
     public static void main(String[] args) {
-        int count = 0;
-        int[] array = {2, 3, 3, 5};
-        for (int i = 0; i < array.length - 1; i++) {
+        int[] array = {2,3,3,4,5,2,2,2};
+        boolean[] mask = new boolean[array.length];
+        System.out.println(Arrays.toString(mask));
 
-            if (array[i] == array[i + 1]) {
-
-                i++;
-                count++;
+        int count=0;
+        int temp=0;
+        for(int i=0;i<array.length;i++){
+            if(!mask[i]){
+                temp =array[i];
+                    for(int j=i+1;j<array.length;j++){
+                        if(temp==array[j]){
+                            mask[j]=true;
+                            count++;
+                        }
+                    }
             }
         }
-        int[] array1 = new int[array.length - count];
-        System.out.println(array.length);
-        int ch = array.length;
-        int k = 0;
-        for (int j = 0; j < ch; j++) {
-            array1[k] = array[j];
-            if (array[j] == array[j + 1]) {
-                j++;
-
+        int[] arrayNew = new int[array.length-count];
+        for(int i=0,j=0;i<array.length;i++){
+            if(!mask[i]){
+                arrayNew[j++]=array[i];
             }
-            if (array1.length==array[k])
-                break;
-            k++;
-
-
         }
-
         System.out.println(count);
         System.out.println(Arrays.toString(array));
-        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(mask));
+        System.out.println(Arrays.toString(arrayNew));
     }
 
 }
