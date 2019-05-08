@@ -6,7 +6,7 @@ public class ex___2 {
     public static void main(String[] args) {
         int[] array = {2,3,3,4,5,2,2,2};
         boolean[] mask = new boolean[array.length];
-        System.out.println(Arrays.toString(mask));
+
 
         int count=0;
         int temp=0;
@@ -27,10 +27,8 @@ public class ex___2 {
                 arrayNew[j++]=array[i];
             }
         }
-        System.out.println(count);
-        System.out.println(Arrays.toString(array));
-        System.out.println(Arrays.toString(mask));
-        System.out.println(Arrays.toString(arrayNew));
+        System.out.println("Было "+Arrays.toString(array));
+        System.out.println("Стало "+Arrays.toString(arrayNew));
     }
 
 }
