@@ -10,16 +10,16 @@ public class Ex_3 {
         double a = scan.nextDouble();
         double b = scan.nextDouble();
         double c = scan.nextDouble();
-        Calculation(a, b, c);
+        calculation(a, b, c);
     }
 
-    public static void Calculation(double a, double b, double c) {
-        if (isPositiv(Discriminant(a, b, c))) {
-            double x1 = ((-b - Math.sqrt(Discriminant(a, b, c))) / (2 * a));
-            double x2 = ((-b + Math.sqrt(Discriminant(a, b, c))) / (2 * a));
+    public static void calculation(double a, double b, double c) {
+        if (isPositiv(discriminant(a, b, c))) {
+            double x1 = ((-b - Math.sqrt(discriminant(a, b, c))) / (2 * a));
+            double x2 = ((-b + Math.sqrt(discriminant(a, b, c))) / (2 * a));
             System.out.println("Корни уравнения: x1 = " + x1 + ", x2 = " + x2);
-            System.out.println(Discriminant(a, b, c));
-        } else if (isZero(Discriminant(a, b, c))) {
+            System.out.println(discriminant(a, b, c));
+        } else if (isZero(discriminant(a, b, c))) {
             double x = -b / (2 * a);
             System.out.println("Уравнение имеет единственный корень: x = " + x);
         } else {
@@ -27,7 +27,7 @@ public class Ex_3 {
         }
     }
 
-    public static double Discriminant(double a, double b, double c) {
+    public static double discriminant(double a, double b, double c) {
         return b * b - 4 * a * c;
     }
 
