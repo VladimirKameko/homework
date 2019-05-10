@@ -2,7 +2,7 @@ package hw_2;
 
 import java.util.Scanner;
 
-public class ex__1 {
+public class Ex__1 {
     public static void main(String[] args) {
         int sum = 0;
         Scanner scan = new Scanner(System.in);

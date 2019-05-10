@@ -2,7 +2,7 @@ package hw_2;
 
 import java.util.Scanner;
 
-public class ex__2_recurs {
+public class Ex__2_recurs {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Введите число:");

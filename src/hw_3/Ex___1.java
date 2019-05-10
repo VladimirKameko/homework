@@ -2,7 +2,7 @@ package hw_3;
 
 import java.util.Arrays;
 
-public class ex___1 {
+public class Ex___1 {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5};
         int positions = 1;

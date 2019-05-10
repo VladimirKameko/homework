@@ -2,7 +2,7 @@ package hw_1;
 
 import java.util.Scanner;
 
-public class ex_2 {
+public class Ex_2 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите размери первого дома");

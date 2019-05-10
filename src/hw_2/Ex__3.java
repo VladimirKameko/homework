@@ -2,7 +2,7 @@ package hw_2;
 
 import java.util.Scanner;
 
-public class ex__3 {
+public class Ex__3 {
     public static void main(String[] args) {
         double sum = 0;
         double average = 0.0;
@@ -19,6 +19,5 @@ public class ex__3 {
                 dayMax = a;
         }
         System.out.println("количество дней: " + days + "\nсумма осадков: " + sum + "\nсреднее количество: " + average + "\nмаксимальное количество:" + dayMax);
-
     }
 }

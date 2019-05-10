@@ -2,7 +2,7 @@ package hw_2;
 
 import java.util.Scanner;
 
-public class ex__2 {
+public class Ex__2 {
 
 
     public static void main(String[] args) {
