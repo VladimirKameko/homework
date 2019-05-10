@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex___4 {
-    private static void arrayCreate(int[][] array, int a, int b) {
+    private static int[] arrayCreate(int[][] array, int a, int b) {
         int[] array1 = new int[a * b];
         int q = 0;
         for (int i = 0; i < a; i++) {
@@ -14,9 +14,7 @@ public class Ex___4 {
                 q++;
             }
         }
-        System.out.println(Arrays.toString(array1));
-
-
+        return array1;
     }
 
     public static void main(String[] args) {
@@ -32,7 +30,6 @@ public class Ex___4 {
                 twoDimArray[i][j] = scan.nextInt();
             }
         }
-        arrayCreate(twoDimArray, lines, columns);
-
+        System.out.println(Arrays.toString(arrayCreate(twoDimArray, lines, columns)));
     }
 }
