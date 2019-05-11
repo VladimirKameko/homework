@@ -3,7 +3,7 @@ package hw_4;
 import java.util.Scanner;
 
 public class Ex____2 {
-    private static int checkNum(String str) {
+    public static int checkNum(String str) {
         int num = 0;
         String f = " ";
         str = str + f;
@@ -24,7 +24,7 @@ public class Ex____2 {
 
     }
 
-    private static int findNum(char s) {
+    public static int findNum(char s) {
         int dec = 0;
         switch (s) {
             case 'M':
