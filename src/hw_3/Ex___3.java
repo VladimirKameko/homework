@@ -4,7 +4,7 @@ package hw_3;
 import java.util.Arrays;
 
 public class Ex___3 {
-    private static int[] sortArray(int[] array) {//сортировка слиянием
+    private static int[] sortArray(int[] array) {
         Arrays.sort(array);
         return array;
     }
