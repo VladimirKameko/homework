@@ -3,11 +3,7 @@ package hw_3;
 import java.util.Arrays;
 
 public class Ex___2 {
-    public static void main(String[] args) {
-        int[] array = {2, 3, 3, 4, 5, 2, 2, 2};
-        boolean[] mask = new boolean[array.length];
-
-
+    public static int[] arrayCreate(int[] array, boolean[] mask) {
         int count = 0;
         int temp = 0;
         for (int i = 0; i < array.length; i++) {
@@ -27,8 +23,16 @@ public class Ex___2 {
                 arrayNew[j++] = array[i];
             }
         }
+        return arrayNew;
+    }
+
+    public static void main(String[] args) {
+        int[] array = {2, 3, 3, 4, 5, 2, 2, 2};
+        boolean[] mask = new boolean[array.length];
+
+
         System.out.println("Было " + Arrays.toString(array));
-        System.out.println("Стало " + Arrays.toString(arrayNew));
+        System.out.println("Стало" + Arrays.toString(arrayCreate(array, mask)));
     }
 
 }
