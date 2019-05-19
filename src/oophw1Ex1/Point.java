@@ -28,9 +28,10 @@ public  final class  Point {
         if(x>=0)
         this.y = y;
     }
-    public void distance(Point point){
+    public double distance(Point point){
         double dis= Math.sqrt((Math.pow(point.getX()-getX(),2))+((Math.pow(point.getY()-getY(),2))));
-        System.out.println(dis);
+        return dis;
+
     }
     public void translate(double x, double y){
         setX(getX()+x);
