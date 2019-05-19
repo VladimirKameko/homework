@@ -1,4 +1,4 @@
-package oopHw1Ex2;
+package oophw1.oopHw1Ex2;
 
 public class Car {
     private double fuel;

@@ -1,4 +1,6 @@
-package oophw1Ex1;
+package oophw1.oopHw1Ex1;
+
+import oophw1.oopHw1Ex1.Point;
 
 public class TestPoint {
     public static void main(String[] args) {
