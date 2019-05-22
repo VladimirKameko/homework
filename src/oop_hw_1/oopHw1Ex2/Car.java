@@ -1,6 +1,6 @@
-package oophw1.oopHw1Ex2;
+package oop_hw_1.oopHw1Ex2;
 
-public class Car {
+class Car {
     private double fuel;
     private double distance;
     private double fuelConsumtion;
@@ -33,11 +33,11 @@ public class Car {
         setFuelConsumtion(fuelConsumtion);
     }
 
-    public void fueling(double liters) {
+    void fueling(double liters) {
         setFuel(getFuel() + liters);
     }
 
-    public String tripCar(double roudLength) {
+    String tripCar(double roudLength) {
         if (roudLength > (getFuelConsumtion() * getFuel())) {
             return "Недостаточно топлива для поездки. Необходимо заправиться";
         }

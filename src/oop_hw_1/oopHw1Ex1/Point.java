@@ -1,8 +1,8 @@
-package oophw1.oopHw1Ex1;
+package oop_hw_1.oopHw1Ex1;
 
 
 
-public  final class  Point {
+  final class  Point {
     private double x;
     private double y;
 

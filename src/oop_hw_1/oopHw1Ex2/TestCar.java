@@ -1,6 +1,6 @@
-package oophw1.oopHw1Ex2;
+package oop_hw_1.oopHw1Ex2;
 
-public class TestCar {
+class TestCar {
     public static void main(String[] args) {
         Car vw = new Car(10);
         vw.fueling(10);
