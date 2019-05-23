@@ -55,18 +55,16 @@ class Car {
     }
 
     double tripCar(double roudLength) {
+        double roud=checkReserveTrip();
         if (roudLength > checkReserveTrip()) {
             setDistance(getDistance() + checkReserveTrip());
             setFuel(getFuel()-fuelRequired(checkReserveTrip()));
-            return getDistance();
+            return roud;
         }
         else {
             setDistance(getDistance() + roudLength);
             setFuel(getFuel() - fuelRequired(roudLength));
-            return getDistance();
+            return roudLength;
         }
-
-
-
     }
 }

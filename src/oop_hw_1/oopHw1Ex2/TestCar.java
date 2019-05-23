@@ -10,8 +10,10 @@ package oop_hw_1.oopHw1Ex2;
 class TestCar {
     public static void main(String[] args) {
         Car vw = new Car(10);
-        vw.fillFuel(9);
-        System.out.println(vw.tripCar(100));
+        vw.fillFuel(50);
+        System.out.println(vw.tripCar(500));
+        vw.fillFuel(10);
+        System.out.println(vw.tripCar(500));
 
         System.out.println(vw);
     }
