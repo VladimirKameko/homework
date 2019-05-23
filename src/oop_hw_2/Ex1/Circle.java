@@ -24,14 +24,17 @@ public class Circle {
     public void setB(Point b) {
         this.b = b;
     }
-    private double segmentLenght(Point point2, Point point1){
+
+    private double segmentLenght(Point point2, Point point1) {
         return Math.sqrt((Math.pow(point2.getX() - point1.getX(), 2)) + ((Math.pow(point2.getY() - point1.getY(), 2))));
 
     }
-    public double cirkleLenght(){
-        return 2*segmentLenght(getB(),getA())*Math.PI;
+
+    double cirkleLenght() {
+        return 2 * segmentLenght(getB(), getA()) * Math.PI;
     }
-    public double area(){
-        return Math.pow((segmentLenght(getB(),getA())*Math.PI),2);
+
+    double area() {
+        return Math.pow(segmentLenght(getB(), getA()), 2) * Math.PI;
     }
 }
