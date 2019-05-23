@@ -5,21 +5,37 @@ public class Car {
     private double distance;
     private double fuelConsumtion;
 
-    public void setFuel(double fuel) {this.fuel = fuel;}
+    public void setFuel(double fuel) {
+        this.fuel = fuel;
+    }
 
-    public void setDistance(double distance) {this.distance = distance;}
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
 
-    public void setFuelConsumtion(double fuelConsumtion) {this.fuelConsumtion = fuelConsumtion;}
+    public void setFuelConsumtion(double fuelConsumtion) {
+        this.fuelConsumtion = fuelConsumtion;
+    }
 
-    public double getFuel() {return fuel;}
+    public double getFuel() {
+        return fuel;
+    }
 
-    public double getDistance() {return distance;}
+    public double getDistance() {
+        return distance;
+    }
 
-    public double getFuelConsumtion() {return fuelConsumtion;}
+    public double getFuelConsumtion() {
+        return fuelConsumtion;
+    }
 
-   public Car(double fuelConsumtion) {setFuelConsumtion(fuelConsumtion);}
+    public Car(double fuelConsumtion) {
+        setFuelConsumtion(fuelConsumtion);
+    }
 
-   public void fillFuel(double liters) {setFuel(getFuel() + liters);}
+    public void fillFuel(double liters) {
+        setFuel(getFuel() + liters);
+    }
 
     @Override
     public String toString() {
@@ -30,10 +46,14 @@ public class Car {
                 '}';
     }
 
-    private double checkReserveTrip() {return getFuelConsumtion() * getFuel();}
+    private double checkReserveTrip() {
+        return getFuelConsumtion() * getFuel();
+    }
     //на сколько километров пути есть топлива в баке
 
-    private double fuelRequired(double roudLength) {return ((getFuelConsumtion() * roudLength) / 100);}
+    private double fuelRequired(double roudLength) {
+        return ((getFuelConsumtion() * roudLength) / 100);
+    }
     //сколько топлива необходимо что бы проехать заданное кол км
 
     public double tripCar(double roudLength) {
