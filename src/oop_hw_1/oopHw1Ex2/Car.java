@@ -33,17 +33,39 @@ class Car {
         setFuelConsumtion(fuelConsumtion);
     }
 
-    void fueling(double liters) {
+    void fillFuel(double liters) {
         setFuel(getFuel() + liters);
     }
 
-    String tripCar(double roudLength) {
-        if (roudLength > (getFuelConsumtion() * getFuel())) {
-            return "Недостаточно топлива для поездки. Необходимо заправиться";
+    @Override
+    public String toString() {
+        return "Car{" +
+                "fuel=" + fuel +
+                ", distance=" + distance +
+                ", fuelConsumtion=" + fuelConsumtion +
+                '}';
+    }
+
+    private double checkReserveTrip(){                    //на сколько километров пути есть топлива в баке
+        return getFuelConsumtion() * getFuel();
+    }
+    private double fuelRequired(double roudLength){    //сколько топлива необходимо что бы проехать заданное кол км
+        return ((getFuelConsumtion() * roudLength) / 100);
+
+    }
+
+    double tripCar(double roudLength) {
+        if (roudLength > checkReserveTrip()) {
+            setDistance(getDistance() + checkReserveTrip());
+            setFuel(getFuel()-fuelRequired(checkReserveTrip()));
+            return getDistance();
         }
-        setDistance(getDistance() + roudLength);
-        setFuel(getFuel() - ((getFuelConsumtion() * roudLength) / 100));
-        return "Проехали: " + getDistance() + "\n" + "Топлива в баке: " + getFuel();
+        else {
+            setDistance(getDistance() + roudLength);
+            setFuel(getFuel() - fuelRequired(roudLength));
+            return getDistance();
+        }
+
 
 
     }
