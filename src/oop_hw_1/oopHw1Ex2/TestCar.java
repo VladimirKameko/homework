@@ -7,7 +7,7 @@ package oop_hw_1.oopHw1Ex2;
 Укажите расход топлива (в л/км) в качестве параметра конструктора данного класса.
 */
 
-class TestCar {
+public class TestCar {
     public static void main(String[] args) {
         Car vw = new Car(10);
         vw.fillFuel(50);

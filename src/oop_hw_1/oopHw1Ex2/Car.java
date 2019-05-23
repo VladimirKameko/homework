@@ -1,41 +1,25 @@
 package oop_hw_1.oopHw1Ex2;
 
-class Car {
+public class Car {
     private double fuel;
     private double distance;
     private double fuelConsumtion;
 
-    private void setFuel(double fuel) {
-        this.fuel = fuel;
-    }
+    public void setFuel(double fuel) {this.fuel = fuel;}
 
-    private void setDistance(double distance) {
-        this.distance = distance;
-    }
+    public void setDistance(double distance) {this.distance = distance;}
 
-    private void setFuelConsumtion(double fuelConsumtion) {
-        this.fuelConsumtion = fuelConsumtion;
-    }
+    public void setFuelConsumtion(double fuelConsumtion) {this.fuelConsumtion = fuelConsumtion;}
 
-    private double getFuel() {
-        return fuel;
-    }
+    public double getFuel() {return fuel;}
 
-    private double getDistance() {
-        return distance;
-    }
+    public double getDistance() {return distance;}
 
-    private double getFuelConsumtion() {
-        return fuelConsumtion;
-    }
+    public double getFuelConsumtion() {return fuelConsumtion;}
 
-    Car(double fuelConsumtion) {
-        setFuelConsumtion(fuelConsumtion);
-    }
+   public Car(double fuelConsumtion) {setFuelConsumtion(fuelConsumtion);}
 
-    void fillFuel(double liters) {
-        setFuel(getFuel() + liters);
-    }
+   public void fillFuel(double liters) {setFuel(getFuel() + liters);}
 
     @Override
     public String toString() {
@@ -46,22 +30,19 @@ class Car {
                 '}';
     }
 
-    private double checkReserveTrip(){                    //на сколько километров пути есть топлива в баке
-        return getFuelConsumtion() * getFuel();
-    }
-    private double fuelRequired(double roudLength){    //сколько топлива необходимо что бы проехать заданное кол км
-        return ((getFuelConsumtion() * roudLength) / 100);
+    private double checkReserveTrip() {return getFuelConsumtion() * getFuel();}
+    //на сколько километров пути есть топлива в баке
 
-    }
+    private double fuelRequired(double roudLength) {return ((getFuelConsumtion() * roudLength) / 100);}
+    //сколько топлива необходимо что бы проехать заданное кол км
 
-    double tripCar(double roudLength) {
-        double roud=checkReserveTrip();
+    public double tripCar(double roudLength) {
+        double roud = checkReserveTrip();
         if (roudLength > checkReserveTrip()) {
             setDistance(getDistance() + checkReserveTrip());
-            setFuel(getFuel()-fuelRequired(checkReserveTrip()));
+            setFuel(getFuel() - fuelRequired(checkReserveTrip()));
             return roud;
-        }
-        else {
+        } else {
             setDistance(getDistance() + roudLength);
             setFuel(getFuel() - fuelRequired(roudLength));
             return roudLength;
