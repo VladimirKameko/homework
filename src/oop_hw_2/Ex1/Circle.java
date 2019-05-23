@@ -1,27 +1,27 @@
 package oop_hw_2.Ex1;
 
-public class Circle {
+class Circle {
     private Point a;
     private Point b;
 
-    public Circle(Point a, Point b) {
+    Circle(Point a, Point b) {
         this.a = a;
         this.b = b;
     }
 
-    public Point getA() {
+    Point getA() {
         return a;
     }
 
-    public Point getB() {
+    Point getB() {
         return b;
     }
 
-    public void setA(Point a) {
+    void setA(Point a) {
         this.a = a;
     }
 
-    public void setB(Point b) {
+    void setB(Point b) {
         this.b = b;
     }
 

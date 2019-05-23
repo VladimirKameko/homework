@@ -1,64 +1,63 @@
 package oop_hw_2.Ex1;
 
-public class Rectangle {
+class Rectangle {
     private Point pointA;
     private Point pointB;
     private Point pointC;
     private Point pointD;
 
-     Rectangle(Point pointA, Point pointB, Point pointC, Point pointD) {
+    Rectangle(Point pointA, Point pointB, Point pointC, Point pointD) {
         this.pointA = pointA;
         this.pointB = pointB;
         this.pointC = pointC;
         this.pointD = pointD;
     }
 
-    public Point getPointA() {
+    Point getPointA() {
         return pointA;
     }
 
-    public Point getPointB() {
+    Point getPointB() {
         return pointB;
     }
 
-    public Point getPointC() {
+    Point getPointC() {
         return pointC;
     }
 
-    public Point getPointD() {
+    Point getPointD() {
         return pointD;
     }
 
-    public void setPointA(Point pointA) {
+    void setPointA(Point pointA) {
         this.pointA = pointA;
     }
 
-    public void setPointB(Point pointB) {
+    void setPointB(Point pointB) {
         this.pointB = pointB;
     }
 
-    public void setPointC(Point pointC) {
+    void setPointC(Point pointC) {
         this.pointC = pointC;
     }
 
-    public void setPointD(Point pointD) {
+    void setPointD(Point pointD) {
         this.pointD = pointD;
     }
 
-    private double segmentLenght(Point point2, Point point1){
-       return Math.sqrt((Math.pow(point2.getX() - point1.getX(), 2)) + ((Math.pow(point2.getY() - point1.getY(), 2))));
+    private double segmentLenght(Point point2, Point point1) {
+        return Math.sqrt((Math.pow(point2.getX() - point1.getX(), 2)) + ((Math.pow(point2.getY() - point1.getY(), 2))));
 
     }
 
-     double diagLength() {
-        return segmentLenght(getPointC(),getPointA());
+    double diagLength() {
+        return segmentLenght(getPointC(), getPointA());
 
     }
 
-     double area() {
+    double area() {
 
-        return segmentLenght(getPointB(),getPointA())*segmentLenght(getPointC(),getPointB());
+        return segmentLenght(getPointB(), getPointA()) * segmentLenght(getPointC(), getPointB());
 
     }
-
 }
