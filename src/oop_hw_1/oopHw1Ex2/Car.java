@@ -5,6 +5,37 @@ public class Car {
     private double distance;
     private double fuelConsumtion;
 
+    public Car(double fuelConsumtion) {
+        setFuelConsumtion(fuelConsumtion);
+    }
+
+    public double tripCar(double roudLength) {
+        double roud = checkReserveTrip();
+        if (roudLength > checkReserveTrip()) {
+            setDistance(getDistance() + checkReserveTrip());
+            setFuel(getFuel() - fuelRequired(checkReserveTrip()));
+            return roud;
+        } else {
+            setDistance(getDistance() + roudLength);
+            setFuel(getFuel() - fuelRequired(roudLength));
+            return roudLength;
+        }
+    }
+
+    public void fillFuel(double liters) {
+        setFuel(getFuel() + liters);
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "fuel=" + fuel +
+                ", distance=" + distance +
+                ", fuelConsumtion=" + fuelConsumtion +
+                '}';
+    }
+
+
     public void setFuel(double fuel) {
         this.fuel = fuel;
     }
@@ -29,23 +60,6 @@ public class Car {
         return fuelConsumtion;
     }
 
-    public Car(double fuelConsumtion) {
-        setFuelConsumtion(fuelConsumtion);
-    }
-
-    public void fillFuel(double liters) {
-        setFuel(getFuel() + liters);
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "fuel=" + fuel +
-                ", distance=" + distance +
-                ", fuelConsumtion=" + fuelConsumtion +
-                '}';
-    }
-
     private double checkReserveTrip() {
         return getFuelConsumtion() * getFuel();
     }
@@ -56,16 +70,5 @@ public class Car {
     }
     //сколько топлива необходимо что бы проехать заданное кол км
 
-    public double tripCar(double roudLength) {
-        double roud = checkReserveTrip();
-        if (roudLength > checkReserveTrip()) {
-            setDistance(getDistance() + checkReserveTrip());
-            setFuel(getFuel() - fuelRequired(checkReserveTrip()));
-            return roud;
-        } else {
-            setDistance(getDistance() + roudLength);
-            setFuel(getFuel() - fuelRequired(roudLength));
-            return roudLength;
-        }
-    }
+
 }
