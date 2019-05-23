@@ -1,4 +1,13 @@
 package oop_hw_2.Ex1;
+/*Продолжение задачи 1. Используя класс точки, создать класс Rectangle, описывающий прямоугольник, и класс Circle
+ описывающий круг. В них должны храниться поля типа Point в роли координат.
+Создать следующие методы в классе Rectangle:
+- Высчитывающий длину диагонали
+Методы в классе Circle:
+- Высчитывающий длину окружности. У обоих классов должен быть метод нахождения площади. Написать программу,
+ тестовый класс с методом main, демонстрирующим создание объекта класса Rectangle и применение
+  вышеперечисленных методов.
+ */
 
 public class Ex_1 {
     public static void main(String[] args) {
@@ -7,8 +16,8 @@ public class Ex_1 {
         Point pointC = new Point(4, 3);
         Point pointD = new Point(4, 1);
         Rectangle rec = new Rectangle(pointA, pointB, pointC, pointD);
-        System.out.println(rec.DiagLength(pointA,pointC));
-        System.out.println(rec.area(pointA,pointB,pointC));
+        System.out.println(rec.diagLength());
+        System.out.println(rec.area());
 
 
     }

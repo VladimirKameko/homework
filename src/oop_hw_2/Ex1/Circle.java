@@ -1,12 +1,37 @@
 package oop_hw_2.Ex1;
 
 public class Circle {
-    Point a;
-    Point b;
+    private Point a;
+    private Point b;
 
     public Circle(Point a, Point b) {
         this.a = a;
         this.b = b;
     }
 
+    public Point getA() {
+        return a;
+    }
+
+    public Point getB() {
+        return b;
+    }
+
+    public void setA(Point a) {
+        this.a = a;
+    }
+
+    public void setB(Point b) {
+        this.b = b;
+    }
+    private double segmentLenght(Point point2, Point point1){
+        return Math.sqrt((Math.pow(point2.getX() - point1.getX(), 2)) + ((Math.pow(point2.getY() - point1.getY(), 2))));
+
+    }
+    public double cirkleLenght(){
+        return 2*segmentLenght(getB(),getA())*Math.PI;
+    }
+    public double area(){
+        return Math.pow((segmentLenght(getB(),getA())*Math.PI),2);
+    }
 }
