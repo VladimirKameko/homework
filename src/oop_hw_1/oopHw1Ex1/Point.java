@@ -2,9 +2,9 @@ package oop_hw_1.oopHw1Ex1;
 
 
 
-  final class  Point {
-    private double x;
-    private double y;
+public  class  Point {
+    private    double x;
+    private   double y;
 
     public double getX() {
         return x;
@@ -33,14 +33,13 @@ package oop_hw_1.oopHw1Ex1;
         return dis;
 
     }
-    public void translate(double x, double y){
-        setX(getX()+x);
-        setY(getY()+y);
+    public  void translate(double x, double y){
+        Point point3 = new Point(getX()+x,getY()+y);
+
 
     }
     public void scale(double sc){
-        setX(getX()*sc);
-        setY(getY()*sc);
+
     }
 
     @Override
