@@ -19,6 +19,7 @@ public class Rectangle implements FigureInterfeice {
 
     }
 
+    @Override
     public double area() {
 
         return segmentLenght(getPointB(), getPointA()) * segmentLenght(getPointC(), getPointB());

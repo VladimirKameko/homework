@@ -14,6 +14,8 @@ public class Circle implements FigureInterfeice {
         return 2 * rad * Math.PI;
     }
 
+
+    @Override
     public double area() {
         return Math.pow(rad, 2) * Math.PI;
     }
