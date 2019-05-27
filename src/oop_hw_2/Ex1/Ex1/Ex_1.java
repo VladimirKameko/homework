@@ -17,12 +17,10 @@ public class Ex_1 {
         Point pointC = new Point(4, 3);
         Point pointD = new Point(4, 1);
         Rectangle rec = new Rectangle(pointA, pointB, pointC, pointD);
-        Point O1 = new Point(4, 4);
+        FigureInterfeice figure = new Circle(pointC, 15);
         Point O2 = new Point(8, 8);
-        Circle c = new Circle(O1, O2);
+        System.out.println(figure.area());
         System.out.println(rec.diagLength());
         System.out.println(rec.area());
-        System.out.println(c.area());
-
     }
 }
