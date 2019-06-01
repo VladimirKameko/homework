@@ -17,7 +17,7 @@ public class Ex_1 {
         Point pointC = new Point(4, 3);
         Point pointD = new Point(4, 1);
         Rectangle rec = new Rectangle(pointA, pointB, pointC, pointD);
-        FigureInterfeice figure = new Circle(pointC, 15);
+        GetArea figure = new Circle(pointC, 15);
         Point O2 = new Point(8, 8);
         System.out.println(figure.area());
         System.out.println(rec.diagLength());

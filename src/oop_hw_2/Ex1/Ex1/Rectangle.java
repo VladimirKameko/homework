@@ -1,7 +1,7 @@
 package oop_hw_2.Ex1.Ex1;
 
 
-public class Rectangle implements FigureInterfeice {
+public class Rectangle implements GetArea {
     private Point pointA;
     private Point pointB;
     private Point pointC;

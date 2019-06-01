@@ -1,7 +1,7 @@
 package oop_hw_2.Ex1.Ex1;
 
 
-public class Circle implements FigureInterfeice {
+public class Circle implements GetArea {
     private Point a;
     private double rad;
 
