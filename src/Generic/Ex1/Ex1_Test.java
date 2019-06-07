@@ -1,4 +1,4 @@
-package Generic;
+package Generic.Ex1;
 
 public class Ex1_Test {
     public static void main(String[] args) {
