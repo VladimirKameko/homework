@@ -18,12 +18,12 @@ public class PairMaxMin<E extends Comparable> {
         return e2;
     }
 
-
+    @SuppressWarnings("unchecked")
     public E Maks() {
         return (getE1().compareTo(getE2())) > 0 ? getE1() : getE2();
 
     }
-
+    @SuppressWarnings("unchecked")
     public E Min() {
         return (getE1().compareTo(getE2())) < 0 ? getE1() : getE2();
 
