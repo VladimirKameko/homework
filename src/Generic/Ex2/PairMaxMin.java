@@ -1,31 +1,31 @@
 package Generic.Ex2;
 
 
-public class PairMaxMin<E extends Comparable> {
-    private E e1;
-    private E e2;
+public class PairMaxMin<E extends Comparable<E>> {
+    private E fst;
+    private E snd;
 
     public PairMaxMin(E e1, E e2) {
-        this.e1 = e1;
-        this.e2 = e2;
+        this.fst = e1;
+        this.snd = e2;
     }
 
-    public E getE1() {
-        return e1;
+    public E getFst() {
+        return fst;
     }
 
-    public E getE2() {
-        return e2;
+    public E getSnd() {
+        return snd;
     }
 
-    @SuppressWarnings("unchecked")
+
     public E Maks() {
-        return (getE1().compareTo(getE2())) > 0 ? getE1() : getE2();
+        return (getFst().compareTo(getSnd())) > 0 ? getFst() : getSnd();
 
     }
-    @SuppressWarnings("unchecked")
+
     public E Min() {
-        return (getE1().compareTo(getE2())) < 0 ? getE1() : getE2();
+        return (getFst().compareTo(getSnd())) < 0 ? getFst() : getSnd();
 
     }
 

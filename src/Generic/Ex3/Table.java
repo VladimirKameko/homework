@@ -38,7 +38,7 @@ public class Table<K, V> {
         ListIterator<Entry<K, V>> entryIterator = entryList.listIterator();
         while (entryIterator.hasNext()) {
             if (entryIterator.next().getKey().equals(key)) {
-               entryList.remove(entryIterator.next());
+               entryIterator.remove();
                 return true;
             }
         }

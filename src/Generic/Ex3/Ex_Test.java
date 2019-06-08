@@ -12,7 +12,7 @@ public class Ex_Test {
         System.out.println(table.getValue(2));
         System.out.println(table.addValue(3,"q"));
         System.out.println(table.getValue(2));
-        table.remove(5);
+        table.remove(1);
         System.out.println(table.getList());
     }
 }
