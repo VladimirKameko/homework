@@ -8,7 +8,7 @@ public class Table<K, V> {
     private List<Entry<K, V>> entryList = new ArrayList<>();
 
 
-    public void Add(Entry<K, V> entry) {
+    public void add(Entry<K, V> entry) {
         entryList.add(entry);
     }
 
