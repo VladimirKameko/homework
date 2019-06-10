@@ -6,7 +6,7 @@ public class Ex2_Test {
 
 
         PairMaxMin<Integer> pair = new PairMaxMin<>(14, 5);
-        System.out.println(pair.Min());
-        System.out.println(pair.Maks());
+        System.out.println(pair.min());
+        System.out.println(pair.maks());
     }
 }

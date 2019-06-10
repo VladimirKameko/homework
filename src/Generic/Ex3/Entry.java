@@ -1,6 +1,6 @@
 package Generic.Ex3;
 
-public class Entry<K,V> {
+public class Entry<K, V> {
     private K key;
     private V value;
 

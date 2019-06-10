@@ -19,12 +19,12 @@ public class PairMaxMin<E extends Comparable<E>> {
     }
 
 
-    public E Maks() {
+    public E maks() {
         return (getFst().compareTo(getSnd())) > 0 ? getFst() : getSnd();
 
     }
 
-    public E Min() {
+    public E min() {
         return (getFst().compareTo(getSnd())) < 0 ? getFst() : getSnd();
 
     }

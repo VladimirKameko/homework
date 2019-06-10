@@ -13,14 +13,14 @@ public class Table<K, V> {
     }
 
 
-    public List<V> getValue(K key) {
-        List<V> values = new ArrayList<>();
+    public V getValue(K key) {
+
         for (Entry<K, V> entry : entryList) {
             if (entry.getKey().equals(key)) {
-                values.add(entry.getValue());
+                return entry.getValue();
             }
         }
-        return values;
+        return null;
 
     }
 
@@ -38,7 +38,7 @@ public class Table<K, V> {
         ListIterator<Entry<K, V>> entryIterator = entryList.listIterator();
         while (entryIterator.hasNext()) {
             if (entryIterator.next().getKey().equals(key)) {
-               entryIterator.remove();
+                entryIterator.remove();
                 return true;
             }
         }
