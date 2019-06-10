@@ -24,7 +24,7 @@ public class Table<K, V> {
 
     }
 
-    public boolean addValue(K key, V value) {
+    public boolean updateValue(K key, V value) {
         for (Entry<K, V> entry : entryList) {
             if (entry.getKey().equals(key)) {
                 entry.setValue(value);
