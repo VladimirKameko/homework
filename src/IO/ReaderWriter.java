@@ -8,7 +8,6 @@ import java.util.TreeMap;
 
 public class ReaderWriter {
     Map<Character, Integer> list = new TreeMap<>();
-
     public Map<Character, Integer> readAndWrite(File inFile, File outFile) throws IOException {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(inFile)))) {
             String text;
@@ -22,12 +21,10 @@ public class ReaderWriter {
                 }
                 text.toCharArray();
             }
-
-
         }
-        try(BufferedWriter write = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)))){
-            for(Map.Entry<Character,Integer> out:list.entrySet()){
-                write.write(out.getKey()+"-"+out.getValue()+"\n");
+        try (BufferedWriter write = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)))) {
+            for (Map.Entry<Character, Integer> out : list.entrySet()) {
+                write.write(out.getKey() + "-" + out.getValue() + "\n");
             }
         }
         return list;
