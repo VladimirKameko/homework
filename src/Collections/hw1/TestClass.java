@@ -1,10 +1,15 @@
 package Collections.hw1;
 
 
-import java.util.List;
+
+import static java.util.Arrays.asList;
 
 public class TestClass {
     public static void main(String[] args) {
-        //List<Pair<Integer>> pairlist = asList(new Pair(1,2), new Pair(3,4), new Pair(5,6));
+       for(Integer max: new PairMaxIterable(asList(new Pair(6,2), new Pair(3,2), new Pair(1,5)))){
+           System.out.println(max+" ");
+       }
     }
+
+
 }

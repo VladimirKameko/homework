@@ -1,6 +1,6 @@
 package Collections.hw1;
 
-public class Pair<E> {
+public class Pair<E extends Comparable<E>> {
     private E fst;
     private E snd;
 
@@ -23,5 +23,8 @@ public class Pair<E> {
     public Pair(E fst, E snd) {
         this.fst = fst;
         this.snd = snd;
+    }
+    public E maks() {
+        return (getFst().compareTo(getSnd())) > 0 ? getFst() : getSnd();
     }
 }
