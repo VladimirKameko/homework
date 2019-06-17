@@ -1,7 +1,6 @@
-package Concurrent.Ex1;
+package Concurrent.hw1.Ex1;
 
 import java.io.BufferedInputStream;
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.net.URL;
 

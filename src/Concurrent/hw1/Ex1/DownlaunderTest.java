@@ -1,6 +1,4 @@
-package Concurrent.Ex1;
-
-import Concurrent.Ex1.Downlaunder;
+package Concurrent.hw1.Ex1;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
