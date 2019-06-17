@@ -1,4 +1,4 @@
-package Java_8;
+package Java_8.Ex2;
 
 import java.util.Map;
 import java.util.stream.Collectors;
